@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Decentraland ESLint config",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "eslint -c test/.eslintrc.js test/"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/decentraland/dcl-eslint.git"
@@ -34,7 +36,6 @@
   "files": [
     "index.js",
     "eslint.js",
-    ".eslintignore",
     "README.md",
     "LICENSE"
   ]

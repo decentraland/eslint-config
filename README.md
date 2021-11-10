@@ -19,7 +19,7 @@ In `eslintrc.js`:
 
 ```js
 {
-  "extends": "decentraland"
+  "extends": "@dcl/eslint-config"
 }
 ```
 
