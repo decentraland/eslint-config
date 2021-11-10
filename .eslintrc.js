@@ -23,6 +23,7 @@ module.exports = {
     "@typescript-eslint/no-inferrable-types": 0,
     "@typescript-eslint/no-empty-function": "off",
     "@typescript-eslint/no-explicit-any": "off",
-    "@typescript-eslint/no-floating-promises": 2
+    "@typescript-eslint/no-floating-promises": 2,
+    "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }]
   }
 }
