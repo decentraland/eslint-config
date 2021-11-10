@@ -2,15 +2,7 @@
 
 ## Installation
 ```sh
-npm install -D eslint-config-decentraland
-```
-- Install peer dependencies
-```sh
-npm info eslint-config-decentraland peerDependencies
-```
-or
-```sh
-npx install-peerdeps --dev eslint-config-decentraland
+npm install -D @dcl/eslint-config
 ```
 
 ## Usage
