@@ -1,5 +1,5 @@
 {
-  "name": "eslint-config-decentraland",
+  "name": "@dcl/eslint-config",
   "version": "1.0.0",
   "description": "Decentraland ESLint config",
   "main": "index.js",
