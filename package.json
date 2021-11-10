@@ -8,15 +8,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/decentraland/dcl-eslint.git"
+    "url": "git+https://github.com/decentraland/eslint-config-decentraland.git"
   },
-  "keywords": [],
+  "keywords": [
+    "eslint",
+    "config",
+    "typescript",
+    "ts"
+  ],
   "author": "",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/decentraland/dcl-eslint/issues"
+    "url": "https://github.com/decentraland/eslint-config-decentraland/issues"
   },
-  "homepage": "https://github.com/decentraland/dcl-eslint#readme",
+  "homepage": "https://github.com/decentraland/eslint-config-decentraland#readme",
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.3.1",
     "@typescript-eslint/parser": "^5.3.1",
@@ -35,7 +40,7 @@
   },
   "files": [
     "index.js",
-    "eslint.js",
+    ".eslintrc.js",
     "README.md",
     "LICENSE"
   ]
