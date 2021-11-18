@@ -7,11 +7,14 @@ npm install -D @dcl/eslint-config
 
 ## Usage
 
-In `eslintrc.js`:
+In `eslintrc.json`:
 
 ```js
 {
-  "extends": "@dcl/eslint-config"
+  "extends": "@dcl/eslint-config",
+  "parserOptions": {
+    "project": ["tsconfig.json", "test/tsconfig.json"]
+  }
 }
 ```
 
