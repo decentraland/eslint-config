@@ -42,6 +42,7 @@
     "index.js",
     ".eslintrc.js",
     "README.md",
-    "LICENSE"
+    "LICENSE",
+    "sdk.js"
   ]
 }
