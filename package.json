@@ -22,7 +22,7 @@
     "url": "https://github.com/decentraland/eslint-config-decentraland/issues"
   },
   "homepage": "https://github.com/decentraland/eslint-config-decentraland#readme",
-  "peerDependencies": {
+  "dependencies": {
     "@typescript-eslint/eslint-plugin": "^5.3.1",
     "@typescript-eslint/parser": "^5.3.1",
     "eslint": "^8.2.0",
@@ -40,6 +40,7 @@
   },
   "files": [
     "index.js",
+    "prettier.js",
     ".eslintrc.js",
     "README.md",
     "LICENSE",
