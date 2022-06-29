@@ -14,7 +14,9 @@
     "eslint",
     "config",
     "typescript",
-    "ts"
+    "ts",
+    "sort",
+    "import"
   ],
   "author": "",
   "license": "Apache-2.0",
@@ -27,6 +29,12 @@
     "@typescript-eslint/parser": "^5.3.1",
     "eslint": "^8.2.0",
     "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-babel-module": "^5.3.1",
+    "eslint-import-resolver-jest": "^3.0.2",
+    "eslint-import-resolver-typescript": "^3.1.1",
+    "eslint-plugin-autofix": "^1.1.0",
+    "eslint-plugin-css-import-order": "^1.1.0",
+    "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-prettier": "^4.0.0",
     "prettier": "^2.4.1"
   },
@@ -44,6 +52,7 @@
     ".eslintrc.js",
     "README.md",
     "LICENSE",
-    "sdk.js"
+    "sdk.js",
+    "gatsby.js"
   ]
 }
