@@ -34,7 +34,7 @@
     "eslint-import-resolver-typescript": "^3.5.3",
     "eslint-plugin-autofix": "^1.1.0",
     "eslint-plugin-css-import-order": "^1.1.0",
-    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-prettier": "^4.2.1",
     "prettier": "^2.4.1"
   },
