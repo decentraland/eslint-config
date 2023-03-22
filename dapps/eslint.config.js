@@ -8,8 +8,6 @@ module.exports = {
   plugins: ['@typescript-eslint', 'import'],
   extends: [
     'eslint:recommended',
-    'react-app',
-    'react-app/jest',
     'plugin:import/recommended',
     'plugin:import/typescript',
     'plugin:@typescript-eslint/recommended',
