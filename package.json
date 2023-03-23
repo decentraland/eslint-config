@@ -54,6 +54,6 @@
     "LICENSE",
     "sdk.js",
     "gatsby.js",
-    "dapps"
+    "dapps.js"
   ]
 }

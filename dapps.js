@@ -2,7 +2,7 @@ module.exports = {
   root: true,
   env: {
     browser: true,
-    es6: true
+    es6: true,
   },
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint', 'import'],
@@ -11,7 +11,7 @@ module.exports = {
     'plugin:import/recommended',
     'plugin:import/typescript',
     'plugin:@typescript-eslint/recommended',
-    'plugin:prettier/recommended'
+    'plugin:prettier/recommended',
   ],
   rules: {
     '@typescript-eslint/ban-types': 'error',
@@ -32,7 +32,7 @@ module.exports = {
       { selector: 'memberLike', modifiers: ['private'], format: ['camelCase'], leadingUnderscore: 'require' },
       { selector: 'typeLike', format: ['PascalCase'] },
       { selector: 'typeParameter', format: ['PascalCase'], prefix: ['T'] },
-      { selector: 'interface', format: ['PascalCase'], custom: { regex: '^I[A-Z]', match: false } }
+      { selector: 'interface', format: ['PascalCase'], custom: { regex: '^I[A-Z]', match: false } },
     ],
     'import/order': [
       'error',
@@ -50,23 +50,34 @@ module.exports = {
           { pattern: 'modules/**', group: 'internal', position: 'before' },
           { pattern: 'components/**', group: 'internal', position: 'after' },
           { pattern: './*.types', group: 'sibling', position: 'after' },
-          { pattern: './*.css', group: 'sibling', position: 'after' }
+          { pattern: './*.css', group: 'sibling', position: 'after' },
         ],
         distinctGroup: false,
         'newlines-between': 'never',
         alphabetize: {
           order: 'asc',
-          caseInsensitive: true
+          caseInsensitive: true,
         },
-        warnOnUnassignedImports: true
-      }
-    ]
+        warnOnUnassignedImports: true,
+      },
+    ],
+    'prettier/prettier': [
+      'error',
+      {
+        semi: false,
+        singleQuote: true,
+        printWidth: 140,
+        tabWidth: 2,
+        trailingComma: 'none',
+        arrowParens: 'avoid',
+      },
+    ],
   },
   settings: {
     'import/resolver': {
       node: {
-        paths: ['./src']
-      }
-    }
-  }
+        paths: ['./src'],
+      },
+    },
+  },
 }
