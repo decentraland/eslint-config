@@ -53,6 +53,7 @@
     "README.md",
     "LICENSE",
     "sdk.js",
-    "gatsby.js"
+    "gatsby.js",
+    "dapps.js"
   ]
 }
