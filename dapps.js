@@ -33,6 +33,11 @@ module.exports = {
       { selector: 'typeLike', format: ['PascalCase'] },
       { selector: 'typeParameter', format: ['PascalCase'], prefix: ['T'] },
       { selector: 'interface', format: ['PascalCase'], custom: { regex: '^I[A-Z]', match: false } },
+      {
+        selector: ['variable', 'function', 'objectLiteralProperty', 'objectLiteralMethod'],
+        types: ['function'],
+        format: ['StrictPascalCase', 'strictCamelCase'],
+      },
     ],
     'import/order': [
       'error',
