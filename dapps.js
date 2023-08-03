@@ -38,7 +38,8 @@ module.exports = {
         types: ['function'],
         format: ['StrictPascalCase', 'strictCamelCase'],
       },
-      { selector: ['enum', 'enumMember'], format: ['UPPER_CASE'], leadingUnderscore: 'allow' },
+      { selector: ['enum'], format: ['UPPER_CASE', 'PascalCase'], leadingUnderscore: 'allow' },
+      { selector: ['enumMember'], format: ['UPPER_CASE'], leadingUnderscore: 'allow' },
     ],
     'import/order': [
       'error',
