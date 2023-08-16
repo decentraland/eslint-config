@@ -44,7 +44,7 @@ module.exports = {
     'import/order': [
       'error',
       {
-        groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index', 'object', 'type'],
+        groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index', 'object'],
         pathGroupsExcludedImportTypes: ['react', 'react-*/**', 'react-*', '@dcl/**', 'decentraland-*/**', 'decentraland-*'],
         pathGroups: [
           { pattern: 'react', group: 'builtin', position: 'before' },
@@ -64,6 +64,7 @@ module.exports = {
         alphabetize: {
           order: 'asc',
           caseInsensitive: true,
+          orderImportKind: 'desc',
         },
         warnOnUnassignedImports: true,
       },
