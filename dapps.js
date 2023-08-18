@@ -29,7 +29,7 @@ module.exports = {
       { selector: 'variable', types: ['function'], format: ['PascalCase', 'camelCase'] },
       { selector: 'parameter', format: ['camelCase'], leadingUnderscore: 'allow' },
       { selector: 'memberLike', format: ['camelCase'] },
-      { selector: 'memberLike', modifiers: ['private'], format: ['camelCase'], leadingUnderscore: 'require' },
+      { selector: 'memberLike', modifiers: ['private'], format: ['camelCase'], leadingUnderscore: 'allow' },
       { selector: 'typeLike', format: ['PascalCase'] },
       { selector: 'typeParameter', format: ['PascalCase'], prefix: ['T'] },
       { selector: 'interface', format: ['PascalCase'], custom: { regex: '^I[A-Z]', match: false } },
