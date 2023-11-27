@@ -83,6 +83,7 @@ module.exports = {
   },
   settings: {
     'import/resolver': {
+      typescript: true,
       node: {
         paths: ['./src'],
       },
