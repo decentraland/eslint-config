@@ -35,7 +35,7 @@
     "eslint-plugin-css-import-order": "^1.1.0",
     "eslint-plugin-import": "npm:eslint-plugin-i@^2.27.5-3",
     "eslint-plugin-prettier": "^4.2.1",
-    "prettier": "^2.8.8"
+    "prettier": "^3.1.1"
   },
   "devDependencies": {
     "typescript": "^5.1.6"
