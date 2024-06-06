@@ -95,8 +95,10 @@ module.exports = {
             pattern: "@dcl/schemas/*",
             group: "internal",
           },
+          { pattern: "./*.types", group: "sibling", position: "after" },
+          { pattern: "./*.styled", group: "sibling", position: "after" },
         ],
-        "newlines-between": "always",
+        "newlines-between": "never",
         alphabetize: {
           order: "asc",
           caseInsensitive: true,
