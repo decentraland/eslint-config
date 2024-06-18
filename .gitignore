@@ -3,4 +3,4 @@ dist/
 node_modules/
 temp/
 tsdoc-metadata.json
-package.json
+package-lock.json
