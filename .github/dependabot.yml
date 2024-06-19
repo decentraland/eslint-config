@@ -1,8 +1,17 @@
 version: 2
 updates:
-- package-ecosystem: npm
-  directory: "/"
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 10
-  versioning-strategy: increase
+  - package-ecosystem: npm
+    directory: "/"
+    schedule:
+      interval: weekly
+      day: monday
+      time: "09:00"
+      timezone: "America/Buenos_Aires"
+    allow:
+      - dependency-name: "@typescript-eslint/*"
+      - dependency-name: "prettier"
+      - dependency-name: "eslint"
+      - dependency-name: "eslint-*"
+    versioning-strategy: auto
+    commit-message:
+      prefix: "chore: "
