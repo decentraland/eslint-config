@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/decentraland/eslint-config-decentraland.git"
+    "url": "git+https://github.com/decentraland/eslint-config.git"
   },
   "keywords": [
     "eslint",
@@ -23,9 +23,9 @@
   "author": "",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/decentraland/eslint-config-decentraland/issues"
+    "url": "https://github.com/decentraland/eslint-config/issues"
   },
-  "homepage": "https://github.com/decentraland/eslint-config-decentraland#readme",
+  "homepage": "https://github.com/decentraland/eslint-config#readme",
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "@typescript-eslint/parser": "^6.21.0",
