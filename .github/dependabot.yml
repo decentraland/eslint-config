@@ -9,6 +9,7 @@ updates:
       timezone: "America/Buenos_Aires"
     allow:
       - dependency-name: "@typescript-eslint/*"
+      - dependency-name: "prettier"
       - dependency-name: "eslint"
       - dependency-name: "eslint-*"
     versioning-strategy: auto
