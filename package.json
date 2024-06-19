@@ -4,6 +4,7 @@
   "description": "Decentraland ESLint config",
   "main": "index.js",
   "scripts": {
+    "build": "echo 'done'",
     "test": "eslint -c test/.eslintrc.js test/"
   },
   "repository": {
