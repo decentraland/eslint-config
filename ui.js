@@ -19,6 +19,7 @@ module.exports = {
     "plugin:react/jsx-runtime",
   ],
   rules: {
+    "react/display-name": "off",
     "import/no-named-as-default-member": "off",
     "import/no-default-export": "error",
     "@typescript-eslint/no-explicit-any": "off",
