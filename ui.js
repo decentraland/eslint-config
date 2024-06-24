@@ -20,6 +20,7 @@ module.exports = {
   ],
   rules: {
     "import/no-named-as-default-member": "off",
+    "import/no-default-export": "error",
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/ban-types": [
       "error",
