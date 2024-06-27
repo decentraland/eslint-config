@@ -22,7 +22,9 @@ module.exports = {
     "react/display-name": "off",
     "import/no-named-as-default-member": "off",
     "import/no-default-export": "error",
-    "@typescript-eslint/no-explicit-any": "off",
+    "import/group-exports": "error",
+    "import/exports-last": "error",
+    "@typescript-eslint/no-explicit-any": "error",
     "@typescript-eslint/ban-types": [
       "error",
       {
