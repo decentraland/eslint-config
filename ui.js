@@ -24,7 +24,7 @@ module.exports = {
     "import/no-default-export": "error",
     "import/group-exports": "error",
     "import/exports-last": "error",
-    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-explicit-any": "error",
     "@typescript-eslint/ban-types": [
       "error",
       {
