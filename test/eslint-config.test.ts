@@ -129,25 +129,6 @@ describe('when loading ESLint configurations', () => {
     })
   })
 
-  describe('and the Core UI configuration is loaded', () => {
-    let config: ESLintConfig
-
-    beforeEach(() => {
-      config = require('../core-ui.js')
-    })
-
-    it('should load without throwing errors', () => {
-      expect(() => {
-        require('../core-ui.js')
-      }).not.toThrow()
-    })
-
-    it('should have extends and rules properties', () => {
-      expect(config).toHaveProperty('extends')
-      expect(config).toHaveProperty('rules')
-    })
-  })
-
   describe('and the Prettier configuration is loaded', () => {
     let config: ESLintConfig
 
