@@ -4,5 +4,8 @@ module.exports = {
     sourceType: 'module', // Allows for the use of imports,
     project: 'test/tsconfig.json'
   },
-  extends: ['../.eslintrc.js']
+  extends: ['../.eslintrc.js'],
+  rules: {
+    '@typescript-eslint/no-var-requires': 'off'
+  }
 }
