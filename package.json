@@ -56,6 +56,7 @@
     "gatsby.js",
     "dapps.js",
     "ui.js",
-    "core-services.js"
+    "core-services.js",
+    "core-dapps.js"
   ]
 }
