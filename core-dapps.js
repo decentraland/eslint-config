@@ -8,13 +8,6 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 2018,
     sourceType: "module",
-    project: [
-      './tsconfig.app.json',
-      './tsconfig.node.json',
-      './tsconfig.worker.json',
-      './tsconfig.json',
-    ],
-    tsconfigRootDir: __dirname,
   },
   plugins: ["@typescript-eslint", "react", "prettier", "import", "autofix"],
   extends: [
