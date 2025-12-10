@@ -104,13 +104,6 @@ module.exports = {
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
     "no-restricted-imports": "off",
-    "@typescript-eslint/no-restricted-imports": [
-      "error",
-      {
-        paths: ["lodash", "decentraland-connect"],
-        patterns: ["lodash.*"],
-      },
-    ],
     "autofix/no-debugger": "error",
     "sort-imports": [
       "error",
