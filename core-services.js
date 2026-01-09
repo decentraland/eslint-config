@@ -1,8 +1,14 @@
+const { getTypeScriptProjectParserOptions } = require("./utils/tsconfig")
+
+const tsProject = getTypeScriptProjectParserOptions()
+const hasTypeScriptProject = Boolean(tsProject)
+
 module.exports = {
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaVersion: 2018,
     sourceType: "module",
+    ...(tsProject ?? {}),
   },
   env: {
     node: true,
@@ -26,7 +32,7 @@ module.exports = {
     "@typescript-eslint/no-inferrable-types": "error",
     "@typescript-eslint/no-empty-function": "error",
     "@typescript-eslint/no-explicit-any": "error",
-    "@typescript-eslint/no-floating-promises": "error",
+    "@typescript-eslint/no-floating-promises": hasTypeScriptProject ? "error" : "off",
     "@typescript-eslint/no-non-null-assertion": "error",
     "@typescript-eslint/no-namespace": "error",
     "@typescript-eslint/prefer-optional-chain": "error",
@@ -43,17 +49,6 @@ module.exports = {
       }
     ],
     "import/no-named-as-default-member": "off",
-    "@typescript-eslint/ban-types": [
-      "error",
-      {
-        types: {
-          "{}": {
-            message: "Use Record<string, unknown> instead of {}",
-            fixWith: "Record<string, unknown>",
-          },
-        },
-      },
-    ],
     "@typescript-eslint/explicit-module-boundary-types": "warn",
     "no-restricted-imports": "off",
     "@typescript-eslint/no-restricted-imports": "off",

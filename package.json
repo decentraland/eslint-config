@@ -1,13 +1,76 @@
 {
   "name": "@dcl/eslint-config",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "Decentraland ESLint config",
   "main": "index.js",
+  "files": [
+    "index.js",
+    "prettier.js",
+    ".eslintrc.js",
+    "README.md",
+    "LICENSE",
+    "sdk.js",
+    "sdk.config.js",
+    "dapps.js",
+    "dapps.config.js",
+    "ui.js",
+    "ui.config.js",
+    "core-services.js",
+    "core-services.config.js",
+    "core-dapps.js",
+    "core-dapps.config.js",
+    "npm-package-json-lint.js",
+    "utils"
+  ],
   "scripts": {
     "build": "echo 'done building'",
     "lint:check": "echo 'done linting'",
     "test": "jest",
-    "lint": "eslint -c test/.eslintrc.js test/"
+    "lint": "eslint test/"
+  },
+  "dependencies": {
+    "@eslint/eslintrc": "3.3.3",
+    "@eslint/js": "9.39.2"
+  },
+  "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.52.0",
+    "@typescript-eslint/parser": "^8.52.0",
+    "eslint": "^9.0.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-import-resolver-babel-module": "^5.3.2",
+    "eslint-import-resolver-typescript": "^4.4.4",
+    "eslint-plugin-autofix": "^2.2.0",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-react": "^7.37.5",
+    "prettier": "^3.0.0"
+  },
+  "peerDependenciesMeta": {
+    "eslint-import-resolver-babel-module": {
+      "optional": true
+    },
+    "eslint-plugin-react": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/jest": "30.0.0",
+    "@typescript-eslint/eslint-plugin": "8.52.0",
+    "@typescript-eslint/parser": "8.52.0",
+    "eslint": "9.39.2",
+    "eslint-config-prettier": "10.1.8",
+    "eslint-import-resolver-babel-module": "5.3.2",
+    "eslint-import-resolver-typescript": "4.4.4",
+    "eslint-plugin-autofix": "2.2.0",
+    "eslint-plugin-import": "2.32.0",
+    "eslint-plugin-prettier": "5.5.4",
+    "eslint-plugin-react": "7.37.5",
+    "jest": "30.2.0",
+    "npm-package-json-lint": "9.1.0",
+    "prettier": "3.7.4",
+    "react": "19.2.3",
+    "ts-jest": "29.4.6",
+    "typescript": "5.9.3"
   },
   "repository": {
     "type": "git",
@@ -27,36 +90,7 @@
     "url": "https://github.com/decentraland/eslint-config/issues"
   },
   "homepage": "https://github.com/decentraland/eslint-config#readme",
-  "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.21.0",
-    "@typescript-eslint/parser": "^6.21.0",
-    "eslint": "^8.57.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-import-resolver-babel-module": "^5.3.2",
-    "eslint-import-resolver-typescript": "^3.6.1",
-    "eslint-plugin-autofix": "^1.1.0",
-    "eslint-plugin-css-import-order": "^1.1.0",
-    "eslint-plugin-import": "npm:eslint-plugin-i@^2.29.1",
-    "eslint-plugin-prettier": "^5.1.3",
-    "prettier": "^3.3.2"
-  },
-  "devDependencies": {
-    "@types/jest": "^30.0.0",
-    "jest": "^30.1.3",
-    "ts-jest": "^29.1.0",
-    "typescript": "^5.4.5"
-  },
-  "files": [
-    "index.js",
-    "prettier.js",
-    ".eslintrc.js",
-    "README.md",
-    "LICENSE",
-    "sdk.js",
-    "gatsby.js",
-    "dapps.js",
-    "ui.js",
-    "core-services.js",
-    "core-dapps.js"
-  ]
+  "engines": {
+    "node": ">=18.18.0"
+  }
 }

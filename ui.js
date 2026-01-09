@@ -25,13 +25,9 @@ module.exports = {
     "import/group-exports": "error",
     "import/exports-last": "error",
     "@typescript-eslint/no-explicit-any": "error",
-    "@typescript-eslint/ban-types": [
+    "@typescript-eslint/no-empty-object-type": [
       "error",
-      {
-        types: {
-          "{}": false,
-        },
-      },
+      { allowObjectTypes: "always" },
     ],
     "@typescript-eslint/no-empty-function": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
