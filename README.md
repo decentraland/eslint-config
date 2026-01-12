@@ -89,6 +89,70 @@ This package publishes most tooling as **peerDependencies**. In the consumer rep
 
 > Note: some presets configure the `babel-module` resolver; if you use it, install `eslint-import-resolver-babel-module` and its peers (`@babel/core`, `babel-plugin-module-resolver`).
 
+## Upgrading from v1 to v2
+
+### Breaking changes
+
+- **ESLint 9 required** – The new flat config (`eslint.config.js`) requires ESLint >= 9.0.0
+- **Peer dependencies** – Plugins are now peer dependencies (you install them in your project)
+- **New entrypoints** – Use `*.config.js` for ESLint 9, keep `*` (without `.config`) for legacy `.eslintrc`
+- **Removed presets** – `gatsby` preset has been removed
+
+### Migration steps
+
+1. **Update the package:**
+
+```sh
+# Yarn
+yarn add -D @dcl/eslint-config@^2.0.0
+
+# npm
+npm install -D @dcl/eslint-config@^2.0.0
+```
+
+2. **Install peer dependencies** (if not already present):
+
+```sh
+# Yarn
+yarn add -D eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin \
+  prettier eslint-plugin-prettier eslint-config-prettier \
+  eslint-plugin-import eslint-import-resolver-typescript eslint-plugin-autofix
+
+# npm
+npm install -D eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin \
+  prettier eslint-plugin-prettier eslint-config-prettier \
+  eslint-plugin-import eslint-import-resolver-typescript eslint-plugin-autofix
+```
+
+3. **Update your ESLint config:**
+
+```js
+// eslint.config.js (ESLint 9)
+const coreDapps = require("@dcl/eslint-config/core-dapps.config");
+
+module.exports = [...coreDapps];
+```
+
+4. **If you encounter peer dependency conflicts:**
+
+```sh
+# Yarn - Remove conflicting old versions first
+yarn remove eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin
+
+# Then reinstall with exact versions
+yarn add -D eslint@9.39.2 @typescript-eslint/parser@8.52.0 @typescript-eslint/eslint-plugin@8.52.0
+```
+
+```sh
+# npm - Remove conflicting old versions first
+npm uninstall eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin
+
+# Then reinstall with exact versions
+npm install -D eslint@9.39.2 @typescript-eslint/parser@8.52.0 @typescript-eslint/eslint-plugin@8.52.0
+```
+
+> **Note:** Avoid using `--legacy-peer-deps` unless absolutely necessary, as it can mask version incompatibilities.
+
 ## License
 
 Apache 2.0
