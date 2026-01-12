@@ -3,8 +3,18 @@
 ## Installation
 
 ```sh
+# Using Yarn
 yarn add -D @dcl/eslint-config
+
+# Using npm
+npm install -D @dcl/eslint-config
 ```
+
+## Prerequisites
+
+- **Node.js** >= 18.18.0
+- **ESLint** >= 9.0.0
+- **TypeScript** (for TypeScript-based presets)
 
 ## Usage (ESLint 9, `eslint.config.js`)
 
