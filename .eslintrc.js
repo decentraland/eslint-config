@@ -1,8 +1,14 @@
+const { getTypeScriptProjectParserOptions } = require('./utils/tsconfig')
+
+const tsProject = getTypeScriptProjectParserOptions()
+const hasTypeScriptProject = Boolean(tsProject)
+
 module.exports = {
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 2020, // Allows for the parsing of modern ECMAScript features
-    sourceType: "module", // Allows for the use of imports,
-    project: []
+    sourceType: 'module', // Allows for the use of imports
+    ...(tsProject ?? {})
   },
   extends: [
     'plugin:@typescript-eslint/recommended', // Uses the recommended rules from the @typescript-eslint/eslint-plugin
@@ -23,7 +29,7 @@ module.exports = {
     "@typescript-eslint/no-inferrable-types": 0,
     "@typescript-eslint/no-empty-function": "off",
     "@typescript-eslint/no-explicit-any": "off",
-    "@typescript-eslint/no-floating-promises": 2,
+    "@typescript-eslint/no-floating-promises": hasTypeScriptProject ? 2 : "off",
     "@typescript-eslint/no-non-null-assertion": "off",
     "@typescript-eslint/no-unused-vars": [
       "warn",

@@ -1,3 +1,8 @@
+const { getTypeScriptProjectParserOptions } = require("./utils/tsconfig")
+
+const tsProject = getTypeScriptProjectParserOptions()
+const hasTypeScriptProject = Boolean(tsProject)
+
 module.exports = {
   root: true,
   env: {
@@ -8,6 +13,7 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 2018,
     sourceType: "module",
+    ...(tsProject ?? {}),
   },
   plugins: ["@typescript-eslint", "react", "prettier", "import", "autofix"],
   extends: [
@@ -26,73 +32,73 @@ module.exports = {
     "import/group-exports": "error",
     "import/exports-last": "error",
     "@typescript-eslint/no-explicit-any": "error",
-    "@typescript-eslint/ban-types": "error",
     "@typescript-eslint/ban-tslint-comment": "error",
-    "@typescript-eslint/quotes": ["error", "single", { avoidEscape: true }],
+    "quotes": ["error", "single", { avoidEscape: true }],
     "@typescript-eslint/no-misused-promises": [
-      "error",
-      { checksVoidReturn: false },
+      ...(hasTypeScriptProject ? ["error", { checksVoidReturn: false }] : ["off"]),
     ],
-    "@typescript-eslint/no-unnecessary-type-assertion": "error",
+    "@typescript-eslint/no-unnecessary-type-assertion": hasTypeScriptProject ? "error" : "off",
     "@typescript-eslint/no-unused-vars": [
       "error",
       { argsIgnorePattern: "^_", ignoreRestSiblings: true },
     ],
-    "@typescript-eslint/unbound-method": "error",
-    "@typescript-eslint/naming-convention": [
-      "error",
-      { selector: "default", format: ["camelCase"] },
-      { selector: "variableLike", format: ["camelCase"] },
-      {
-        selector: "variable",
-        format: ["camelCase", "UPPER_CASE"],
-        leadingUnderscore: "allow",
-      },
-      {
-        selector: "variable",
-        types: ["function"],
-        format: ["PascalCase", "camelCase"],
-      },
-      {
-        selector: "parameter",
-        format: ["camelCase"],
-        leadingUnderscore: "allow",
-      },
-      { selector: "memberLike", format: ["camelCase"] },
-      {
-        selector: "memberLike",
-        modifiers: ["private"],
-        format: ["camelCase"],
-        leadingUnderscore: "allow",
-      },
-      { selector: "typeLike", format: ["PascalCase"] },
-      { selector: "typeParameter", format: ["PascalCase"], prefix: ["T"] },
-      {
-        selector: "interface",
-        format: ["PascalCase"],
-        custom: { regex: "^I[A-Z]", match: false },
-      },
-      {
-        selector: [
-          "variable",
-          "function",
-          "objectLiteralProperty",
-          "objectLiteralMethod",
-        ],
-        types: ["function"],
-        format: ["StrictPascalCase", "strictCamelCase"],
-      },
-      {
-        selector: ["enum"],
-        format: ["UPPER_CASE", "PascalCase"],
-        leadingUnderscore: "allow",
-      },
-      {
-        selector: ["enumMember"],
-        format: ["UPPER_CASE"],
-        leadingUnderscore: "allow",
-      },
-    ],
+    "@typescript-eslint/unbound-method": hasTypeScriptProject ? "error" : "off",
+    "@typescript-eslint/naming-convention": hasTypeScriptProject
+      ? [
+          "error",
+          { selector: "default", format: ["camelCase"] },
+          { selector: "variableLike", format: ["camelCase"] },
+          {
+            selector: "variable",
+            format: ["camelCase", "UPPER_CASE"],
+            leadingUnderscore: "allow",
+          },
+          {
+            selector: "variable",
+            types: ["function"],
+            format: ["PascalCase", "camelCase"],
+          },
+          {
+            selector: "parameter",
+            format: ["camelCase"],
+            leadingUnderscore: "allow",
+          },
+          { selector: "memberLike", format: ["camelCase"] },
+          {
+            selector: "memberLike",
+            modifiers: ["private"],
+            format: ["camelCase"],
+            leadingUnderscore: "allow",
+          },
+          { selector: "typeLike", format: ["PascalCase"] },
+          { selector: "typeParameter", format: ["PascalCase"], prefix: ["T"] },
+          {
+            selector: "interface",
+            format: ["PascalCase"],
+            custom: { regex: "^I[A-Z]", match: false },
+          },
+          {
+            selector: [
+              "variable",
+              "function",
+              "objectLiteralProperty",
+              "objectLiteralMethod",
+            ],
+            types: ["function"],
+            format: ["StrictPascalCase", "strictCamelCase"],
+          },
+          {
+            selector: ["enum"],
+            format: ["UPPER_CASE", "PascalCase"],
+            leadingUnderscore: "allow",
+          },
+          {
+            selector: ["enumMember"],
+            format: ["UPPER_CASE"],
+            leadingUnderscore: "allow",
+          },
+        ]
+      : "off",
     "@typescript-eslint/no-empty-function": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
