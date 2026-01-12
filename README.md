@@ -104,10 +104,10 @@ This package publishes most tooling as **peerDependencies**. In the consumer rep
 
 ```sh
 # Yarn
-yarn add -D @dcl/eslint-config@^2.0.0
+yarn add -D @dcl/eslint-config@^3.0.0
 
 # npm
-npm install -D @dcl/eslint-config@^2.0.0
+npm install -D @dcl/eslint-config@^3.0.0
 ```
 
 2. **Install peer dependencies** (if not already present):
