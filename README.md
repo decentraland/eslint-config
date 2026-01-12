@@ -89,7 +89,7 @@ This package publishes most tooling as **peerDependencies**. In the consumer rep
 
 > Note: some presets configure the `babel-module` resolver; if you use it, install `eslint-import-resolver-babel-module` and its peers (`@babel/core`, `babel-plugin-module-resolver`).
 
-## Upgrading from v1 to v2
+## Upgrading from v2 to v3
 
 ### Breaking changes
 
