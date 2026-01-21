@@ -13,7 +13,7 @@ function getInternalPackageExceptions(pkgJsonSection) {
   if (!pkgJsonSection || typeof pkgJsonSection !== 'object') return []
 
   return Object.keys(pkgJsonSection).filter(
-    name => name.startsWith('@dcl/') || name.startsWith('decentraland-')
+    name => name.startsWith('@dcl/') || name.startsWith('decentraland-') || name.startsWith('dcl-')
   )
 }
 
