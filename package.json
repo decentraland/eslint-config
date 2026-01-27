@@ -6,6 +6,7 @@
   "files": [
     "index.js",
     "prettier.js",
+    "prettier.config.js",
     ".eslintrc.js",
     "README.md",
     "LICENSE",
